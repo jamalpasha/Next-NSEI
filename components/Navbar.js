@@ -9,7 +9,7 @@ import DocLink from "./DocLink"
  * Site header/nav component
  */
 const Navbar = ({ menuLinks = [] }) => (
-    <header className="container site-header">
+    <header className="site-header">
       <Links menuLinks={menuLinks} />
     </header>
 );
