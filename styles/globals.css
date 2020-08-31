@@ -19,19 +19,19 @@ main{
     margin-left: auto;
 }
 
-@media (min-width: 576px){
+@media (min-width: 576px && max-width: 767px){
 .container {
     max-width: 540px;
 }
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px && max-width: 991px){
 .container {
     max-width: 720px;
 }
 }
 
-@media (min-width: 992px){
+@media (min-width: 992px && max-width: 1199px){
 .container {
     max-width: 960px;
 }
@@ -131,9 +131,7 @@ a {
     text-shadow: none;
     transition: all .4s; 
   	}
-.hero_carousal img{
-    		max-height: 593px;
-    	}
+
 
 @media (max-width: 991.98px) {
   	.hero_carousal p {
@@ -152,16 +150,22 @@ a {
     	margin-bottom: 13px; }
   	.hero_carousal > img {
     	max-width: 162px; } 
+
+      .hero_carousal img{
+        min-height: 593px;
+      }
     }
 
 @media (max-width: 767.98px) {
 
 	.hero_carousal p {
-    	font-size: 16px; }
+    	font-size: 16px; 
+      text-align: center; }
   	.hero_carousal h1 {
     	margin: 0 auto 0.5rem;
     	font-size: 1.3rem;
-    	max-width: 250px; }
+    	max-width: 250px;
+      }
   	.hero_carousal p {
     	margin: 0 auto 1rem;
     	max-width: 240px; }
@@ -172,9 +176,13 @@ a {
     	margin: -130px 0 0 0; }
   	.hero_carousal h1 {
     	font-size: 1rem;
-	    text-align: left;
+	    text-align: center;
     	max-width: 300px;
     	margin: 0 auto 20px; }
+
+      .hero_carousal .hero_button{
+        text-align: center;
+      }
 
   	}
 
@@ -236,6 +244,8 @@ a {
     text-align: left;
 }
 
+@media (min-width: 767.98px) {
+
 .hero_carousal .carousal-data>div{
 	top: 120px;
     top: calc(50%);
@@ -243,6 +253,21 @@ a {
     transform: translateY(-50%);
     max-width: 70%;
     left:0;
+}
+
+}
+
+@media (max-width: 767.98px) {
+
+.hero_carousal .carousal-data>div{
+  top: 120px;
+    top: calc(50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    max-width: 70%;
+ 
+}
+
 }
 
 .hero_carousal .slick-dots button{
@@ -253,7 +278,12 @@ a {
 	margin-bottom: 0px !important;
 }
 
+@media (max-width: 767.98px) {
 
+.hero_carousal .slick-dots{
+  justify-content: center;
+}
+}
 
 
 

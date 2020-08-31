@@ -64,10 +64,7 @@ class MySlice extends React.Component{
              carousal_imageurl=item.image.Tablet.url;
 
            }
-           else if(this.state.width>=998 && this.state.width<1400){
-             carousal_imageurl=item.image.LowerDesktop.url;
-           }
-           else if(this.state.width>=1400){
+           else if(this.state.width>998){
              carousal_imageurl=item.image.url;
 
            }
@@ -108,7 +105,7 @@ class MySlice extends React.Component{
                 <RichText render={item.content} />
                 </Box>
 
-                <Box>
+                <Box className="hero_button">
                 <Button
                 label={item.button_label}
                 link={item.button_link}
