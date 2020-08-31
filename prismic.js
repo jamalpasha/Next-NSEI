@@ -9,7 +9,7 @@ export const apiEndpoint = smConfig.apiEndpoint
 
 // -- Access Token if the repository is not public
 // Generate a token in your dashboard and configure it here if your repository is private
-export const accessToken = ''
+export const accessToken = process.env.REACT_APP_ACCESS_TOKEN
 
 // -- Link resolution rules
 // Manages the url links to internal Prismic documents
