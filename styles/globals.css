@@ -12,11 +12,10 @@ main{
 }
 
 .container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+    max-width: calc(1600px + 10%);
+    margin: 0 auto;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 @media (min-width: 576px && max-width: 767px){
@@ -290,7 +289,6 @@ a {
 
 .site-header {
   height: 56px;
-  padding: 20px 0;
 }
 .site-header,
 .site-header a {
@@ -327,4 +325,20 @@ a {
 .site-header nav li:first-child {
   display: inline-block;
   margin-left: 0px;
+}
+
+@media screen and (min-width: 860px){
+.site-header{
+    padding: 20px 5%;
+}
+}
+
+@media screen and (max-width: 859px){
+    .site-header{
+    padding: 20px 5%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 501;
+}
 }
