@@ -40,7 +40,7 @@ class MySlice extends React.Component{
       dotsWithLabel: true,
       arrows: false,
       draggable: true,
-      autoplay: false,
+      autoplay: true,
       autoplaySpeed: 2000,
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -60,16 +60,20 @@ class MySlice extends React.Component{
           {items.map((item) =>{
 
             let carousal_imageurl='';
-            if(this.state.width>767 && this.state.width<=998){
+           if(this.state.width>0 &&this.state.width<=767.98){
+             carousal_imageurl=item.image.Mobile.url;
+
+           }
+          else if(this.state.width>767.98 &&this.state.width<=1083){
              carousal_imageurl=item.image.Tablet.url;
 
            }
-           else if(this.state.width>998){
-             carousal_imageurl=item.image.url;
+           else if(this.state.width>1083 &&this.state.width<1400){
+             carousal_imageurl=item.image.LowerDesktop.url;
 
            }
            else{
-             carousal_imageurl=item.image.Mobile.url;
+             carousal_imageurl=item.image.url;
            }
 
            return (

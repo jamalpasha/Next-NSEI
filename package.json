@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
     "essential-slices": "0.0.11",
     "next": "9.5.2",
     "next-slicezone": "0.0.8",
