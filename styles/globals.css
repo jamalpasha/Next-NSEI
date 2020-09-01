@@ -278,6 +278,7 @@ a {
 	margin-bottom: 0px !important;
   object-fit: cover;
   max-height: 593px;
+  object-position: top;
 }
 
 @media (max-width: 767.98px) {
