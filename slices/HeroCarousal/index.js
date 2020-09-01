@@ -41,10 +41,10 @@ class MySlice extends React.Component{
       arrows: false,
       draggable: true,
       autoplay: true,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 4000,
       slidesToShow: 1,
       slidesToScroll: 1,
-      speed: 200,
+      speed: 300,
       fade: true,
       cssEase: 'linear'
     }
