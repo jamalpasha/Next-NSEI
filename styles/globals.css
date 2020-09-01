@@ -151,6 +151,7 @@ a {
       .hero_carousal img{
         min-height: 400px;
         object-fit: cover;
+        object-position: top;
 
       }
     }

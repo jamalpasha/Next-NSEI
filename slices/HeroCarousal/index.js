@@ -40,7 +40,7 @@ class MySlice extends React.Component{
       dotsWithLabel: true,
       arrows: false,
       draggable: true,
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 2000,
       slidesToShow: 1,
       slidesToScroll: 1,
