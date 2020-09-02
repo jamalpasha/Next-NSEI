@@ -322,7 +322,7 @@ background-color: transparent !important;
 
 
 .navbar a {
-    color: #323e48;
+    color: #fff;
     font-size: 15px;
     font-weight: 400;
     font-family: HelveticaNeueW01-75Bold,Helvetica,Arial,sans-serif;
@@ -372,6 +372,12 @@ background-color: transparent !important;
 .site-header>div{
   padding: 0px;
 }
+
+.site-header .dropdown-menu{
+  background-color: transparent;
+  border:none;
+  color: #fff;
+}
 }
 
 @media screen and (max-width: 859px){
@@ -382,6 +388,8 @@ background-color: transparent !important;
     right: 0;
     z-index: 501;
 }
+
+
 }
 
 @media screen and (max-width: 992px){

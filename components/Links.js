@@ -48,7 +48,7 @@ const Links = ({menuLinks}) => {
 
               return (
          
-          <Nav.Link href={menuLink.primary.link.url}>{RichText.asText(menuLink.primary.label)}</Nav.Link>
+          <Nav.Link class="dropdown-item" href={menuLink.primary.link.url}>{RichText.asText(menuLink.primary.label)}</Nav.Link>
     
 
 
