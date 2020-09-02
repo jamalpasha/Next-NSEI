@@ -6,7 +6,7 @@ import { theme } from 'essential-slices'
 import '../styles/globals.css'
 import { ThemeProvider, BaseStyles } from 'theme-ui'
 import { Client } from "../prismic";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default class App extends NextApp {
   

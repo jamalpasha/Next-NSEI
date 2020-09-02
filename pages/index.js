@@ -6,6 +6,8 @@ import resolver from "../sm-resolver.js";
 
 import Layout from "./../components/Layout";
 
+
+
 const Page = (props) => {
   return (
     <Layout menu={props.menu}>
