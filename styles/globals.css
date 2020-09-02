@@ -302,11 +302,17 @@ a {
 background: none;
 }
 
-.site-header .company-logo{
-  padding: 1em;
+.site-header nav{
+background-color: transparent !important;
 }
 
+.site-header .company-logo{
+  padding: 1.2em;
+}
 
+.navbar-dark .navbar-nav .nav-link{
+  color: #fff !important;
+}
 
 .site-header,
 .site-header a {
@@ -389,4 +395,27 @@ background: none;
     color: #fff;
 
 } 
+
+.site-header>div{
+top: 0;
+    position: fixed;
+    padding-top: 0;
+    width: 100%;
+}
+
+.site-header div img{
+    padding-top: 1em;
+}
+}
+
+@media screen and (max-width: 634px){
+.site-header>div>div{
+  display: flex;
+}
+
+.site-header>div>div>section{
+  width: 35%;
+}
+
+
 }

@@ -67,7 +67,6 @@ return(
     <GridLayout columns={[1, '1fr 2fr']}>
       <Box as="section"><Links menuLinks={menuLinks} /></Box>
       <Box><img src={logo.url} /></Box>
-      <Box sx={{ bg: 'primary', color: 'white' }}>1/3</Box>
     </GridLayout>
   </Box>
   </header>
