@@ -21,9 +21,11 @@ const DocLink = ({ children, link, linkClass }) => {
 
     // Otherwise return a normal anchor element
     return (
-      <a class="dropdown-item" href={linkUrl}>
+      <div>
+      <a className="dropdown-item" href={linkUrl}>
         {children}
       </a>
+      </div>
     );
   }
   return null;

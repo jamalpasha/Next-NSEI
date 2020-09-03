@@ -317,7 +317,9 @@ background-color: transparent !important;
 .site-header,
 .site-header a {
   color: #fff;
-  font-weight: 700;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: HelveticaNeueW01-75Bold,Helvetica,Arial,sans-serif;
 }
 
 
@@ -326,6 +328,13 @@ background-color: transparent !important;
     font-size: 15px;
     font-weight: 400;
     font-family: HelveticaNeueW01-75Bold,Helvetica,Arial,sans-serif;
+    text-align: center;
+    padding: 0.5em 2em;
+  }
+
+  .signin_button{
+        background: rgba(0, 0, 0, 0.2);;
+    border-radius: 15px;
   }
 
 .site-header nav a:hover {
@@ -408,7 +417,7 @@ background-color: transparent !important;
 top: 0;
     position: fixed;
     padding-top: 0;
-    width: 100%;
+    width: 95%;
 }
 
 .site-header div img{

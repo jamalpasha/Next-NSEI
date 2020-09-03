@@ -10,6 +10,8 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 import GridLayout from './GridLayout'
 import { Box } from 'theme-ui'
 import Links from './Links'
+import Signin from './Signin'
+
 /**
  * Site header/nav component
  */
@@ -50,10 +52,10 @@ if(this.state.width>998){
   return(
   <header className="site-header">
   <Box sx={{ bg: 'grey90', p: '1rem' }}>
-    <GridLayout className="fort-nav" columns={[1, '1fr 2fr']}>
+    <GridLayout className="fort-nav" columns={[1, '1fr 2fr 1fr']}>
       <Box className="company-logo"><img src={logo.url} /></Box>
-      <Box as="div"><Links menuLinks={menuLinks} /></Box>
-
+      <Box><Links menuLinks={menuLinks} /></Box>
+      <Box><Signin menuLinks={menuLinks} /></Box>
     </GridLayout>
   </Box>
   </header>
@@ -64,9 +66,10 @@ else{
 return(
   <header className="site-header">
   <Box sx={{ bg: 'grey90', p: '1rem' }}>
-    <GridLayout columns={[1, '1fr 2fr']}>
-      <Box as="section"><Links menuLinks={menuLinks} /></Box>
-      <Box><img src={logo.url} /></Box>
+    <GridLayout columns={[1, '1fr 2fr 1fr']}>
+      <Box><Links menuLinks={menuLinks} /></Box>
+      <Box sx={{textAlign: 'center', width:'100%'}}><img src={logo.url} /></Box>
+      <Box><Signin menuLinks={menuLinks} /></Box>
     </GridLayout>
   </Box>
   </header>
