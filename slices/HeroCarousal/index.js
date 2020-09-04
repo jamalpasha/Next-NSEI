@@ -40,7 +40,7 @@ class MySlice extends React.Component{
       dotsWithLabel: true,
       arrows: false,
       draggable: true,
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 4000,
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -75,6 +75,7 @@ class MySlice extends React.Component{
            else{
              carousal_imageurl=item.image.url;
            }
+           if(this.state.width<=1500){
 
            return (
            <Box key={uuid()}>
@@ -125,7 +126,77 @@ class MySlice extends React.Component{
             </Box>
           
           </Box>
-          )})}
+        
+          )
+         }
+        else{
+
+          const background={
+            backgroundImage: 'url(https://images.prismic.io/next-rep/34500a33-080c-4946-b9b8-5df551596709_tfh-ray.png?auto=compress,format),url('+carousal_imageurl+')', 
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'top left, right bottom',
+            backgroundSize: 'contain'
+          }
+          console.log(item.background_color[0].text);
+          const backgroundcolor={
+            backgroundColor: item.background_color[0].text
+          }
+          
+          return (
+           <Box sx={backgroundcolor} key={uuid()}>
+          
+            <Box
+              as="figure"
+              sx={{
+              img: {
+              width: 'full',
+              }, 'position': 'relative',
+              'text-align': 'left'
+              }}
+            >
+              <Box
+              as="img"
+              src={carousal_imageurl}
+              alt={item.image.alt}
+              width={item.image.dimensions.width}
+              sx={{ mx: 'auto', mb: 'large', 'max-width': '100%' }}
+              />
+          
+            </Box>
+
+            <Box as="section" className="container carousal-data">
+              <Box sx={{'position': 'absolute', 'top': '50%', 'left': '22%', 'transform': 'translate(-50%, -50%)', 'max-width': '40%'}}>
+
+                <Box as="h1" sx={{ fontSize: 'base', mb: 'small' }}>
+                {RichText.asText(item.title)}
+                </Box>
+              
+                <Box sx={{ fontWeight: 'lean' }}>
+                <RichText render={item.content} />
+                </Box>
+
+                <Box className="hero_button">
+                <Button
+                label={item.button_label}
+                link={item.button_link}
+                resolver={linkResolver}
+                variant="item"
+                sx={{'padding-left':'0px'}}
+                />
+                </Box>
+              
+              </Box>
+              
+
+            </Box>
+          
+          </Box>
+        
+          )
+        }
+
+      })}
+
           </Slider>
           </Box>
           </Wrap>
