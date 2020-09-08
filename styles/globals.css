@@ -134,6 +134,13 @@ a {
   	}
 
 
+.hero_carousal .fade_left{
+
+-webkit-mask-image: -webkit-gradient(linear, right top, left top, color-stop(80%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(255, 255, 255, 0)));
+
+
+}
+
 @media (max-width: 991.98px) {
   	.hero_carousal p {
     	font-size: 21px;

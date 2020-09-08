@@ -49,7 +49,7 @@ class MySlice extends React.Component{
       cssEase: 'linear'
     }
 
-
+  
 
     return (
       <Slice className="hero_carousal" sx={{ 'max-width': '100%', 'width': '100%', 'padding-top': '0px'}}>
@@ -131,17 +131,23 @@ class MySlice extends React.Component{
          }
         else{
 
-          const background={
-            backgroundImage: 'url(https://images.prismic.io/next-rep/34500a33-080c-4946-b9b8-5df551596709_tfh-ray.png?auto=compress,format),url('+carousal_imageurl+')', 
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'top left, right bottom',
-            backgroundSize: 'contain'
-          }
-          console.log(item.background_color[0].text);
           const backgroundcolor={
             backgroundColor: item.background_color[0].text
           }
           
+                      console.log("item="+item.css_gradient);
+                      let gradientClass = '';
+                      if(item.css_gradient==="Fade Left"){
+                        gradientClass = "fade_left";
+                      }
+                      else if(item.css_gradient==="Fade Right"){
+                        gradientClass = "fade_right";
+                      }
+                      else if(item.css_gradient==="Circuits"){
+                        gradientClass = "circuits";
+                      }
+
+
           return (
            <Box sx={backgroundcolor} key={uuid()}>
           
@@ -159,6 +165,7 @@ class MySlice extends React.Component{
               src={carousal_imageurl}
               alt={item.image.alt}
               width={item.image.dimensions.width}
+              className={gradientClass}
               sx={{ mx: 'auto', mb: 'large', 'max-width': '100%' }}
               />
           
